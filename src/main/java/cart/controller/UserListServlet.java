@@ -18,7 +18,7 @@ UserListService userListService=new UserListServiceImpl();
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		List<UserDTO>Users=userListService.findAllUsers();
-		req.setAttribute("Users",Users);
+		req.setAttribute("Users",Users);	
 		req.getRequestDispatcher("/WEB-INF/view/cart/user_list.jsp").forward(req, resp);
 	}
 	
